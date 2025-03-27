@@ -20,7 +20,7 @@ The software makes use of machine learning techniques for the segmentation of pa
 
 The architecture of the project presented is shown in the following figure:
 
-![Architecture](docs/images/ARCHITECTURE.png)
+![Architecture](ARCHITECTURE.png)
 
 According to the components of this architecture, the repository is organized in four different parts:
 
@@ -33,8 +33,7 @@ This part related to the backend of expert/normal user
 This part is the application of our website
 ####  incunabulaAdmin
 This part is responsible for admin web application.
-#### docs
-This part contains the images and videos of the application
+
 
 
 ## Installation
@@ -87,5 +86,3 @@ In addition, you can watch the following video:
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
-# CACIN
-CACIN: Computer Aided Cataloguing of Incunabula

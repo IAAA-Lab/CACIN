@@ -1,0 +1,8 @@
+numpy==1.13.3
+tensorflow==1.11.0
+tensorflow-gpu==1.11.0
+keras==2.2.4
+rdflib==4.2.2
+libtiff==4.0.10
+pillow==4.2.1
+scikit-learn==0.22.1

@@ -1,0 +1,397 @@
+.page-content {
+  padding: 20px; /* Espacio interno para separar el contenido de los bordes */
+  margin-top: 60px; /* Ajusta según el tamaño de tu barra de navegación */
+  min-height: calc(100vh - 140px); 
+}
+
+
+.background-login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ecb289' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.navbar {
+  background-color: #ECB289;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=UnifrakturMaguntia&display=swap');
+
+.titleNav {
+  font-family: "Uncial Antiqua", system-ui;
+  font-style: normal;
+  font-size: 3vh;
+  padding-left: 2%;
+}
+
+.image {
+  width: 15%;
+  height: 15%;
+}
+
+.min-vh-85 {
+  min-height: 85vh;
+}
+
+.min-vh-80 {
+  min-height: 80vh;
+}
+
+.bg-ecb289 {
+  background-color: #ECB289;
+}
+
+.bg-color-header {
+  background-color: #ecb289;
+}
+
+.info {
+  font-size: 3vh;
+  padding-left: 2%;
+}
+
+.side-container {
+  padding-top: 30px;
+}
+
+.side-row {
+  padding: 30px;
+}
+
+.react-bootstrap-table thead { 
+  position: sticky; 
+  top: 0; 
+  background-color: #333; 
+  z-index: 1021; 
+  color: white; 
+}
+
+.add-button {
+  background-color: #ECB289;
+  color: black;
+  border: 1px solid;
+  padding: 0.5% 1%; 
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #C68E6A; 
+}
+
+.search {
+  display: flex;
+  align-items: center; 
+  justify-content: end;
+}
+
+.search input {
+  margin-left: 1%; 
+  border: 1px solid #ECB289;
+  padding: 0.5%;
+}
+
+.pagination .page-item .page-link {
+  background-color: #ECB289;
+  color: black;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: black;
+  border-color: #ECB289;
+  color: white; 
+}
+
+.numeroBooks {
+  background-color: #e7e2e2;
+  border: 2px solid #ECB289;
+  border-radius: 5px;
+  padding: 1%;
+}
+
+.custom-button {
+  background-color: #ECB289;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 12px;
+  transition: background-color 0.3s ease; 
+}
+
+.custom-button:hover {
+  background-color: #C68E6A;
+}
+
+.center-cell {
+  text-align: center;
+  vertical-align: middle;
+  width: 10%;
+}
+
+.orange-button {
+  background-color: #ECB289;
+  color: black;
+  border: 1px solid;
+  padding: 3% 4%; 
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.orange-button:hover {
+  background-color: #C68E6A; 
+}
+
+.white-button {
+  background-color: white;
+  color: black;
+  border: 1px solid;
+  padding: 3% 4%; 
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.white-button:hover {
+  background-color: #a39b97; 
+}
+
+.button-container {
+  position: fixed;
+  top: 15%;
+  right: 15%;
+  display: flex;
+  gap: 5%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.table {
+  width: 100%;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.error {
+  margin-top: 1rem;
+  color: red;
+}
+
+.btn-orange:hover {
+  background-color: #C68E6A !important;
+}   
+
+.btn-orange:disabled {
+  background-color: #C68E6A !important;
+} 
+  
+.btn-white:hover {
+  background-color: #D3D3D3 !important;
+}
+
+.btn-white:disabled {
+  background-color: #D3D3D3 !important;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.image-preview {
+  max-width: 50%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.button-loader-container {
+  display: flex;
+  align-items: center;
+}
+
+.loader-margin {
+  margin-left: 10px;
+}
+
+.large-text {
+  font-size: 18px;
+}
+
+
+
+.home-page h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.home-page p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background: white;
+  color: black;
+  width: 100%;
+  font-size: 0.85rem;
+}
+
+/* Subfooter styling */
+.subfooter {
+  background: white;
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Subfooter logo styling */
+.subfooter-logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 20px; /* Adds space between logo and text */
+}
+
+/* Subfooter reference text styling */
+.subfooter-reference {
+  font-size: 1.2rem; /* Adjusted to be bigger than the footer */
+  color: black; /* Set text color to black */
+}
+
+
+.divWithMargin {
+  margin-top: 100px; /* Adjust the value to your liking */
+}
+/*this is for the design of contact us  
+ * */
+ 
+/* Center the container */
+.contact-us-container {
+  max-width: 800px;
+  margin: 20px auto 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Title styling */
+.contact-us-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-us-video {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+/* Paragraph styling */
+.contact-us-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify; /* Justify text alignment */
+}
+
+/* Link styling */
+.contact-us-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-us-link:hover {
+  text-decoration: underline;
+}
+
+/* Add extra padding at the bottom for scrolling */
+.contact-us-content {
+  padding-bottom: 60px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .contact-us-container {
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .contact-us-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-us-paragraph {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+/* Link Styling */
+.contact-link {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Remove underline */
+}
+
+.contact-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+.contact-us-reference {
+  font-weight: bold; /* Make the reference paragraph bold */
+}
+
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This makes the container full height of the viewport */
+}
+
+.centered-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Ensure footer stays at the bottom if content is small */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30vh;
+}

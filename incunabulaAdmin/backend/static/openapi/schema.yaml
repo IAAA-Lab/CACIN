@@ -1,0 +1,32 @@
+openapi: 3.0.1
+info:
+  description: "API para la segmentación de iamgenes de un alfabeto"
+  version: "0.0.1"
+  title: "API Segmentador Alfabetos"
+tags:
+- name: "Segmentacion Imagenes"
+  description: "Operaciones relacionadas con la segmentacion de imagenes"
+paths:
+  /api/segmentAlphabet/:
+    post:
+      tags:
+        - "Segmentacion Imagenes"
+      summary: "Segmenta una imagen de alfabeto que se le pasa como parametros"
+      description: "Hay que enviar una imagen de tipo tiff y el resultado se segmenta y devuelve metadatos en xml"
+      operationId: "uploadFile"
+      requestBody:
+        description: Una imagen TIFF de un alfabeto.
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: La solicitud ha sido correcta.
+          content:
+            text/turtle

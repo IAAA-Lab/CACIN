@@ -1,0 +1,86 @@
+version: "3.8"
+
+services:
+  #############################################
+  #         Font Identification Tool          #
+  #############################################
+  font-identification-tool:
+    build:
+      context: ./fontIdentificationTool
+      dockerfile: Dockerfile # Uses python:3.6-slim
+    ports:
+      - "xxxx:xxxx" # Expose the service on localhost
+    volumes:
+      - ./fontIdentificationTool:/app
+    environment:
+      - MODEL=neuronal-network # <neuronal-network_small> or <neuronal-network>
+    command: python server.py # Command to start the service
+    container_name: font-identification-tool
+
+  #############################################
+  #         PostgreSQL Database               #
+  #############################################
+  db:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: xxxx
+      POSTGRES_PASSWORD: xxxx
+      POSTGRES_DB: xxxx
+    ports:
+      - "xxxx:xxxx"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  #############################################
+  #         Backend Server                    #
+  #############################################
+  backend:
+    build:
+      context: ./incunabulaBackend
+      dockerfile: Dockerfile # Uses python:3.6 as the base image
+    ports:
+      - "xxxx:xxxx"
+    volumes:
+      - ./incunabulaBackend:/app
+    depends_on:
+      - db
+    environment:
+      - DB_NAME=incunabula
+      - DB_USER=xxxx
+      - DB_PASSWORD=xxxx
+      - DB_HOST=db
+      - DB_PORT=xxxx
+    command: >
+      sh -c "
+      python manage.py makemigrations &&
+      python manage.py migrate &&
+      python manage.py collectstatic --noinput &&
+      python fill_db.py incunZaguanRDFRepository.rdf &&
+      python manage.py runserver 0.0.0.0:xxxx
+      "
+
+  #############################################
+  #         Frontend                           #
+  #############################################
+  frontend:
+    build:
+      context: ./incunabula-app
+      target: build # production
+      # target: development # local development
+    # ports:
+    #   - "xxxx:xxxx" # Expose frontend on localhost
+    volumes:
+      - ./incunabula-app/build:/app/build
+    depends_on:
+      - backend
+    environment:
+      - NODE_ENV=production
+      - REACT_APP_API_URL=https://cacin.iaaa.es/api/
+      - REACT_APP_API_URL_AR=https://cacin.iaaa.es/classify
+      - REACT_APP_API_URL_RA=https://cacin.iaaa.es/api/
+      - REACT_APP_API_URL_IMAGES=https://cacin.iaaa.es/uploads/
+
+volumes:
+  db_data:

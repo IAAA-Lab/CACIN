@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  font_identification_tool:
+    build: .
+    ports:
+      - "xxxx:xxxx"
+    environment:
+      - CONDA_DEFAULT_ENV=document-clas
+    volumes:
+      - .:/app
+    command: conda run -n document-clas python server.py
